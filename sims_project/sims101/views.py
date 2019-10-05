@@ -14,7 +14,7 @@ class IndexDetailView(DetailView):
 class IndexCreateView(CreateView):
     model = Index101
     template_name = 'sims101/index_create.html'
-    fields = '__all__'
+    fields = ['data_one', 'data_two']
     ### CreateView, UpdateView에 success_url을 제공하지 않는 경우, 해당 model instance의 get_absolute_url 주소로 이동이 가능한지 체크한다 by Django ]]
 
 class IndexUpdateView(UpdateView):
