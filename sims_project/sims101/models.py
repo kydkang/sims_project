@@ -10,6 +10,11 @@ class Index101(models.Model):
     data_two = models.DecimalField(max_digits=5, decimal_places=2)
     calculated_value = models.CharField(max_length=32, blank=True, )  # to make it not visible in admin, use  editable=False
 
+    class Meta:
+        permissions = [
+            ("index_manager", "Index Manager"), 
+        ]
+
     def calculate(self):
         return self.data_one + self.data_two
 

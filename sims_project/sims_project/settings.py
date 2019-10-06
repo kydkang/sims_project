@@ -128,7 +128,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 AUTH_USER_MODEL = 'users.CustomUser'  
 
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'home'    # place to go after login  when the LoginView doesn’t get a next GET parameter.
 LOGOUT_REDIRECT_URL = 'home' 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'

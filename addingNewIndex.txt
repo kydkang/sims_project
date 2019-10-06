@@ -14,8 +14,20 @@ In models.py,
 
 In views.py, change
   - from .models import Index102
+  - permission > sims102. ... 
   - model = Index102
   - template_name = 'sims102/ .... '
 
 In templates folder, change the subfolder name to sims102 
 In each file in templates/sims102 folder, change to {% url 'sims102: .... %} 
+
+Execute   python manage.py makemigrations sims102
+          python manage.py migrate sims102 
+
+If adding a new department, 
+  - create a new group 'deptone' (group name for the department)
+  - add permission 'Index Manager' of index102 app to the group 
+  - create a user and and the user to the 'deptone' group 
+
+If adding a new user, 
+  - create a user and and the user to the existing group 
