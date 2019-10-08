@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sims101', 
     'sims102', 
-    'users', 
     'crispy_forms', 
 ]
 
@@ -126,10 +126,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-AUTH_USER_MODEL = 'users.CustomUser'  
-
 LOGIN_REDIRECT_URL = 'home'    # place to go after login  when the LoginView doesn’t get a next GET parameter.
-LOGOUT_REDIRECT_URL = 'home' 
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout' 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
 

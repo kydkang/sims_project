@@ -11,3 +11,8 @@ urlpatterns = [
     path('data/<int:pk>/delete', views.IndexDeleteView.as_view(), name='index_delete'), 
 
 ]
+
+
+# app_name = 'account'  domain  in urls.py 
+# You need to use that namespace when reversing urls with reverse/reverse_lazy or {% url %}:
+#  for example,  LOGIN_REDIRECT_URL = reverse_lazy('account:dashboard')
