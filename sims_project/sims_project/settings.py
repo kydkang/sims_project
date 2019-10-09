@@ -126,9 +126,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-LOGIN_REDIRECT_URL = 'home'    # place to go after login  when the LoginView doesn’t get a next GET parameter.
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout' 
+LOGIN_REDIRECT_URL = 'home'    # place to go after login  if no "next" parameter is present in the request (GET parameter)
+LOGIN_URL = 'login'            # The URL to redirect the user to log in 
+LOGOUT_URL = 'logout'          # The URL to redirect the user to log out
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
 
