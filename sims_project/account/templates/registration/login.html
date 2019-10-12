@@ -62,3 +62,14 @@
   {#  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>  #}
 
 {% endblock %}
+
+
+{% comment %} 
+  we can access a number of separate items for each field:
+  •	{{form.field_name}}: The whole field.
+  •	{{form.field_name.errors}}: The list of errors.
+  •	{{form.field_name.id_for_label}}: The id of the label.
+  •	{{form.field_name.help_text}}: The field help text.
+  •	etc!
+  Refer to  https://docs.djangoproject.com/en/2.2/topics/forms/#looping-over-the-form-s-fields
+{% endcomment %} 
