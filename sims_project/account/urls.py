@@ -10,6 +10,10 @@ urlpatterns = [
 
 ]
 
-## you can add password_reset and user register(new user) [[ 2ByExample ]] 
-####### Resetting password views  
-####### User registration    
+## [[ 2ByExample ]] 
+## you can add password_reset 
+## user register(new user) 
+### Resetting password views  
+## User registration   
+## Extending User model  
+## you need to implement user register functionality to extend user model 

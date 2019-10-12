@@ -11,3 +11,7 @@ urlpatterns = [
     path('102/', include('sims102.urls')),   
 
 ]
+
+## you can add login_required permission as follows.  
+## path('', login_required(TemplateView.as_view(template_name='home.html')), name='home'),
+## In this project, it is not needed because  {% if user.is_authenticated %} is used in home.html template.

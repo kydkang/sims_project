@@ -22,7 +22,7 @@ from django.contrib.auth import authenticate, login
 #     return render(request, 'account/login.html', {'form': form})  
 
 
-from django.contrib.auth.decorators import login_required
-@login_required
-def home(request):
-    return render(request, 'home.html', {})  
+# from django.contrib.auth.decorators import login_required
+# @login_required
+# def home(request):
+#     return render(request, 'home.html', {})  
